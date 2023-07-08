@@ -10,6 +10,8 @@ open class TableViewController<T: TableModel, Cell: TableViewCell<T.Item>>: UITa
     
     open override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
         tableView.register(Cell.nib, forCellReuseIdentifier: Cell.id)
     }
     
